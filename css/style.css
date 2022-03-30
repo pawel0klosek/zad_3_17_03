@@ -1,4 +1,4 @@
-@keyframes div-animation {
+@keyframes div-animation_1 {
     
     from {
         transform: translate(0px, 0px);
@@ -15,6 +15,29 @@
     75% {
         background-color: yellow;
         transform: translate(0px, 300px);
+    }
+    to {
+        background-color: red;
+    }
+}
+
+@keyframes div-animation_2 {
+    
+    from {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        background-color: blue;
+        transform: translateX(150px);
+    }
+    50% {
+        background-color: green;
+        transform: translate(150px, 150px);
+    }
+
+    75% {
+        background-color: yellow;
+        transform: translate(0px, 150px);
     }
     to {
         background-color: red;
@@ -39,5 +62,19 @@ body {
     height: 100px;
     width: 100px;
     background-color: red;  
-    animation: 10s 1s linear infinite div-animation;
+    animation: 10s 1s linear infinite div-animation_1;
+}
+
+@media screen and (max-width:768px) {
+
+
+  .div-container {
+      height: 200px;
+      width: 200px;
+  }  
+  .div-move{
+      height: 50px;
+      width: 50px;
+      animation: 10s 1s linear infinite div-animation_2;
+  }
 }
