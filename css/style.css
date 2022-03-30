@@ -1,0 +1,43 @@
+@keyframes div-animation {
+    
+    from {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        background-color: blue;
+        transform: translateX(300px);
+    }
+    50% {
+        background-color: green;
+        transform: translate(300px, 300px);
+    }
+
+    75% {
+        background-color: yellow;
+        transform: translate(0px, 300px);
+    }
+    to {
+        background-color: red;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-container{
+    height: 400px;
+    width: 400px;
+    background-color: grey;
+}
+
+.div-move {
+    height: 100px;
+    width: 100px;
+    background-color: red;  
+    animation: 10s linear infinite div-animation;
+}
