@@ -24,16 +24,16 @@ body {
     transform: translate(0px, 0px);
   }
   25% {
-    transform: translateX(300px);
     background-color: blue;
+    transform: translateX(300px);
   }
   50% {
-    transform: translate(300px, 300px);
     background-color: green;
+    transform: translate(300px, 300px);
   }
   75% {
-    transform: translate(0px, 300px);
     background-color: yellow;
+    transform: translate(0px, 300px);
   }
   100% {
     background-color: red;
@@ -42,7 +42,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .div-container {
-    transform: scale(0.5);
+    transform: scale(0.7);
   }
 }
 @media screen and (max-width: 410px) {
