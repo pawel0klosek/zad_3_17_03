@@ -1,80 +1,54 @@
-@keyframes div-animation_1 {
-    
-    from {
-        transform: translate(0px, 0px);
-    }
-    25% {
-        background-color: blue;
-        transform: translateX(300px);
-    }
-    50% {
-        background-color: green;
-        transform: translate(300px, 300px);
-    }
-
-    75% {
-        background-color: yellow;
-        transform: translate(0px, 300px);
-    }
-    to {
-        background-color: red;
-    }
-}
-
-@keyframes div-animation_2 {
-    
-    from {
-        transform: translate(0px, 0px);
-    }
-    25% {
-        background-color: blue;
-        transform: translateX(150px);
-    }
-    50% {
-        background-color: green;
-        transform: translate(150px, 150px);
-    }
-
-    75% {
-        background-color: yellow;
-        transform: translate(0px, 150px);
-    }
-    to {
-        background-color: red;
-    }
-}
-
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.div-container{
-    height: 400px;
-    width: 400px;
-    background-color: grey;
+.div-container {
+  height: 400px;
+  width: 400px;
+  background-color: grey;
+  display: flex;
 }
 
 .div-move {
-    height: 100px;
-    width: 100px;
-    background-color: red;  
-    animation: 10s 1s linear infinite div-animation_1;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  animation: 10s 1s linear infinite box-animation;
 }
-
-@media screen and (max-width:768px) {
-
-
-  .div-container {
-      height: 200px;
-      width: 200px;
-  }  
-  .div-move{
-      height: 50px;
-      width: 50px;
-      animation: 10s 1s linear infinite div-animation_2;
+@keyframes box-animation {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translateX(300px);
+    background-color: blue;
+  }
+  50% {
+    transform: translate(300px, 300px);
+    background-color: green;
+  }
+  75% {
+    transform: translate(0px, 300px);
+    background-color: yellow;
+  }
+  100% {
+    background-color: red;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .div-container {
+    transform: scale(0.5);
+  }
+}
+@media screen and (max-width: 410px) {
+  .div-container {
+    transform: scale(0.3);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
